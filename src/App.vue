@@ -12,8 +12,8 @@ async function init () {
   app = new PIXI.Application({
     width: window.innerWidth,
     height: window.innerHeight,
-    backgroundColor: '#e75c19',
     resolution: window.devicePixelRatio || 1,
+    backgroundAlpha: 0,
   });
 
   // 加载资源
@@ -21,6 +21,7 @@ async function init () {
 
   // 构造精灵
   const irene = new Spine(resource.spineData);
+  console.log(irene);
   irene.width = irene.width / 2;
   irene.height = irene.height / 2;
   irene.x = window.innerWidth / 2;
@@ -44,4 +45,19 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-color: blueviolet; */
+}
+</style>
