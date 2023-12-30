@@ -58,6 +58,5 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0);
-  /* background-color: blueviolet; */
 }
 </style>

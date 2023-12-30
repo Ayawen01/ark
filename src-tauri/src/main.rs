@@ -10,7 +10,6 @@ fn main() {
             window.set_ignore_cursor_events(true)?;
             let monitor = window.primary_monitor()?.unwrap();
             let monitor_size = monitor.size();
-
             window.set_size(*monitor_size)?;
 
             Ok(())
